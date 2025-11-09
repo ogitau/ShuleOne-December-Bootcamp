@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pet Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>My Pet Gallery</h1>
+    <p style="text-align: center; color: #666;">A collection of my beloved pets using relative image paths</p>
+    
+    <div class="gallery">
+        <!-- Image in same directory: ./filename.jpg or just filename.jpg -->
+        <div class="pet-card">
+            <img src="pet1.jpg" alt="Golden Retriever" onerror="this.src='https://via.placeholder.com/300x200?text=Pet+1'">
+            <h3>Max - Golden Retriever</h3>
+            <p class="path-info">Path: pet1.jpg (same directory)</p>
+        </div>
+        
+        <!-- Image in images subdirectory: images/filename.jpg or ./images/filename.jpg -->
+        <div class="pet-card">
+            <img src="images/pet2.jpg" alt="Siamese Cat" onerror="this.src='https://via.placeholder.com/300x200?text=Pet+2'">
+            <h3>Luna - Siamese Cat</h3>
+            <p class="path-info">Path: images/pet2.jpg (subdirectory)</p>
+        </div>
+        
+        <!-- Another image in images subdirectory -->
+        <div class="pet-card">
+            <img src="./images/pet3.jpg" alt="Parrot" onerror="this.src='https://via.placeholder.com/300x200?text=Pet+3'">
+            <h3>Charlie - Parrot</h3>
+            <p class="path-info">Path: ./images/pet3.jpg (explicit subdirectory)</p>
+        </div>
+        
+        <!-- Image in same directory with explicit path -->
+        <div class="pet-card">
+            <img src="./pet4.jpg" alt="Rabbit" onerror="this.src='https://via.placeholder.com/300x200?text=Pet+4'">
+            <h3>Bunny - Rabbit</h3>
+            <p class="path-info">Path: ./pet4.jpg (same directory, explicit)</p>
+        </div>
+        
+        <!-- Image in assets/images subdirectory -->
+        <div class="pet-card">
+            <img src="assets/images/pet5.jpg" alt="Hamster" onerror="this.src='https://via.placeholder.com/300x200?text=Pet+5'">
+            <h3>Nibbles - Hamster</h3>
+            <p class="path-info">Path: assets/images/pet5.jpg (nested subdirectory)</p>
+        </div>
+        
+        <!-- Image in parent directory: ../filename.jpg -->
+        <div class="pet-card">
+            <img src="../pet6.jpg" alt="Fish" onerror="this.src='https://via.placeholder.com/300x200?text=Pet+6'">
+            <h3>Bubbles - Goldfish</h3>
+            <p class="path-info">Path: ../pet6.jpg (parent directory)</p>
+        </div>
+    </div>
+    
+    <div style="margin-top: 40px; padding: 20px; background: white; border-radius: 8px;">
+        <h2>Understanding Relative Paths</h2>
+        <ul>
+            <li><strong>pet1.jpg</strong> or <strong>./pet1.jpg</strong> - Image in the same directory as the HTML file</li>
+            <li><strong>images/pet2.jpg</strong> or <strong>./images/pet2.jpg</strong> - Image in a subdirectory called "images"</li>
+            <li><strong>assets/images/pet5.jpg</strong> - Image in a nested subdirectory structure</li>
+            <li><strong>../pet6.jpg</strong> - Image in the parent directory (one level up)</li>
+            <li><strong>../../pet.jpg</strong> - Image two levels up from current directory</li>
+        </ul>
+        <p><strong>Note:</strong> The images above use placeholder URLs. To use your own images, place them in the appropriate directories and update the src paths accordingly.</p>
+    </div>
+</body>
+</html>
