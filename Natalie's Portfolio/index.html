@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natalia Abolev - Portfolio</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>My Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Hello, I'm <span class="highlight">Natalia Abolev</span></h2>
+    <p>Frontend Developer passionate about clean design and user-friendly websites.</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <img src="./images/1248503.jpg" alt="Profile photo">
+      <div>
+        <h2>Hi! I'm Natalia Abolev</h2>
+        <p>I'm passionate about web development and love building projects using HTML, CSS, and JavaScript. I enjoy problem-solving and designing websites that make a difference.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card" onclick="toggleProject(this)">
+        <h3>Responsive Blog</h3>
+        <p class="hidden">A blog layout built using CSS Grid and Flexbox.</p>
+      </div>
+      <div class="project-card" onclick="toggleProject(this)">
+        <h3>To-Do App</h3>
+        <p class="hidden">A task manager app that saves tasks in local storage.</p>
+      </div>
+      <div class="project-card" onclick="toggleProject(this)">
+        <h3>Portfolio Website</h3>
+        <p class="hidden">This very site! Built using HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-form">
+    <h2>Let's Connect</h2>
+    <form id="form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+    <p id="feedback"></p>
+    <h3>Social Profiles</h3>
+    <div class="social-links">
+      <a href="https://x.com/Owen_Gitau8" class="twitter"><i class="bi bi-twitter"></i></a>
+      <a href="https://www.facebook.com/halimon.fantos" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/halimonfantos/" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/owen-njenga-002663265/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/ogitau" class="github"><i class="bi bi-github"></i></a>
+      <a href="https://wa.me/254113057490" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </section>
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
